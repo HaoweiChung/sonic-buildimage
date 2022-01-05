@@ -23,9 +23,9 @@ name: $(TeamProject)_$(Build.DefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd
 
 resources:
   repositories:
-  - repository: sonic-mgmt
+  - repository: sonic-buildimage
     type: github
-    name: Azure/sonic-mgmt
+    name: Azure/sonic-buildimage
     endpoint: build
 
 stages:
