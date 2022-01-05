@@ -6,8 +6,7 @@
 trigger:
   branches:
     include:
-      - master
-      - 202012
+      - 201911
   paths:
     exclude:
       - .github
@@ -15,9 +14,7 @@ trigger:
 pr:
   branches:
     include:
-      - master
-      - 202012
-      - bullseye
+      - 201911
   paths:
     exclude:
       - .github
@@ -44,10 +41,6 @@ stages:
       buildOptions: 'USERNAME=admin SONIC_BUILD_JOBS=$(nproc) ${{ variables.VERSION_CONTROL_OPTIONS }}'
       jobGroups:
       - name: vs
-      - name: broadcom
-        variables:
-          swi_image: yes
-      - name: mellanox
 
 - stage: Test
   variables:
